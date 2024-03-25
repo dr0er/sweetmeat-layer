@@ -1,17 +1,15 @@
 .navbar {
-  /* background: black; */
-  background: "transparent";
+  background: transparent;
   height: 80px;
   display: flex;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
+  align-items: center;
   font-weight: 700;
   position: fixed;
-  transition: transform 1000ms;
-}
-
-.navbar.move {
-  transform: translateY(-150px);
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .navlink {
@@ -21,28 +19,19 @@
   align-items: center;
   text-decoration: none;
   cursor: pointer;
+  position: absolute;
+}
+
+.navlink:nth-child(1) {
+  left: 25px;
+}
+
+.navlink:nth-child(2) {
+  right: 25px;
 }
 
 @media screen and (max-width: 530px) {
-  .navlink {
-    position: absolute;
-    top: 10px;
-    left: 25px;
-  }
-
   .desktop {
     display: none;
   }
-}
-
-.navicon {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-  color: #fff;
-  transform: translate(100%, 50%);
-  font-weight: bold;
-  font-size: 2rem;
 }

@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import "./Hero.css";
 import Sidebar from "./Sidebar";
 
-const Hero = () => {
+const Hero = ({ id }) => {
   const [show, setShow] = useState(false);
 
   const toggle = () => {
@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container" id={id}>
       <Navbar toggle={toggle}></Navbar>
       <Sidebar show={show} toggle={toggle}></Sidebar>
       <div className="content">
